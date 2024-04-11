@@ -11,9 +11,9 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/runs")
 public class RunController {
-	private final RunRepository runRepository;
+	private final JdbcRunRepository runRepository;
 
-	public RunController (RunRepository runRepository) {
+	public RunController (JdbcRunRepository runRepository) {
 		this.runRepository = runRepository;
 	}
 
@@ -25,7 +25,7 @@ public class RunController {
 	public Run findById(@PathVariable Integer id) {
 		Optional<Run> run = runRepository.findById(id);
 		if(run.isEmpty()) {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Run not found");
+			throw new RunNotFoundException();
 		}
 		return run.get();
 	}
