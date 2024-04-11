@@ -1,2 +1,4 @@
-package dev.jadamathele.runnerz.run;public class RunRepository {
+package dev.jadamathele.runnerz.run;
+
+public class RunRepository {
 }
