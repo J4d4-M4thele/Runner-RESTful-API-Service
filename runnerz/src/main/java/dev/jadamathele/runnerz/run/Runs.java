@@ -1,2 +1,6 @@
-package dev.jadamathele.runnerz.run;public record Runs() {
+package dev.jadamathele.runnerz.run;
+
+import java.util.List;
+
+public record Runs(List<Run> runs) {
 }
