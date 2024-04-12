@@ -1,2 +1,6 @@
-package dev.jadamathele.runnerz.user;public record User() {
+package dev.jadamathele.runnerz.user;
+
+public record User(
+
+) {
 }
