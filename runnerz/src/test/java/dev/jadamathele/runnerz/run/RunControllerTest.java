@@ -1,4 +1,4 @@
-package dev.danvega.runnerz.run;
+package dev.jadamathele.runnerz.run;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
@@ -62,7 +62,7 @@ class RunControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id", is(run.id())))
                 .andExpect(jsonPath("$.title", is(run.title())))
-                .andExpect(jsonPath("$.miles", is(run.miles())))
+                .andExpect(jsonPath("$.kms", is(run.miles())))
                 .andExpect(jsonPath("$.location", is(run.location().toString())));
     }
 

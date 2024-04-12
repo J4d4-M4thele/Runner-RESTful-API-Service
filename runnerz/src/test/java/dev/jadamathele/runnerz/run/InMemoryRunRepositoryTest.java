@@ -1,4 +1,4 @@
-package dev.danvega.runnerz.run;
+package dev.jadamathele.runnerz.run;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -42,7 +42,7 @@ class InMemoryRunRepositoryTest {
     void shouldFindRunWithValidId() {
         var run = repository.findById(1).get();
         assertEquals("Monday Morning Run", run.title());
-        assertEquals(3, run.miles());
+        assertEquals(3, run.kms());
     }
 
     @Test
@@ -77,7 +77,7 @@ class InMemoryRunRepositoryTest {
                 Location.OUTDOOR), 1);
         var run = repository.findById(1).get();
         assertEquals("Monday Morning Run", run.title());
-        assertEquals(5, run.miles());
+        assertEquals(5, run.kms());
         assertEquals(Location.OUTDOOR, run.location());
     }
 

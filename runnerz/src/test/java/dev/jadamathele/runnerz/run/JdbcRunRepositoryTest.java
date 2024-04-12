@@ -1,8 +1,7 @@
-package dev.danvega.runnerz.run;
+package dev.jadamathele.runnerz.run;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.JdbcTest;
 import org.springframework.context.annotation.Import;
@@ -11,7 +10,8 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @JdbcTest
@@ -49,7 +49,7 @@ class JdbcRunRepositoryTest {
     void shouldFindRunWithValidId() {
         var run = repository.findById(1).get();
         assertEquals("Monday Morning Run", run.title());
-        assertEquals(3, run.miles());
+        assertEquals(3, run.kms());
     }
 
     @Test
@@ -80,7 +80,7 @@ class JdbcRunRepositoryTest {
                 Location.OUTDOOR), 1);
         var run = repository.findById(1).get();
         assertEquals("Monday Morning Run", run.title());
-        assertEquals(5, run.miles());
+        assertEquals(5, run.kms());
         assertEquals(Location.OUTDOOR, run.location());
     }
 

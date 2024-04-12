@@ -12,8 +12,7 @@ public class UserRestClient {
 
     public UserRestClient(RestClient.Builder builder) {
         this.restClient = builder
-                .baseUrl("https://jsonplaceholder.typicode.com/")
-                .build();
+                .baseUrl("https://jsonplaceholder.typicode.com/").build();
     }
 
     List<User> findAll() {
