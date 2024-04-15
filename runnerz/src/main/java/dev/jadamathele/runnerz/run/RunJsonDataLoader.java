@@ -12,7 +12,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 @Component
-public class RunJsonDataLoader implements CommandLineRunner {
+public class
+RunJsonDataLoader implements CommandLineRunner {
 
     private static final Logger log = LoggerFactory.getLogger(RunJsonDataLoader.class);
     private final ObjectMapper objectMapper;
