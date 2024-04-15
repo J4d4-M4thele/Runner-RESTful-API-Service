@@ -42,7 +42,7 @@ class InMemoryRunRepositoryTest {
     void shouldFindRunWithValidId() {
         var run = repository.findById(1).get();
         assertEquals("Monday Morning Run", run.title());
-        assertEquals(3, run.kms());
+        assertEquals(3, run.miles());
     }
 
     @Test
@@ -77,7 +77,7 @@ class InMemoryRunRepositoryTest {
                 Location.OUTDOOR), 1);
         var run = repository.findById(1).get();
         assertEquals("Monday Morning Run", run.title());
-        assertEquals(5, run.kms());
+        assertEquals(5, run.miles());
         assertEquals(Location.OUTDOOR, run.location());
     }
 
