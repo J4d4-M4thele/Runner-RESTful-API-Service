@@ -80,7 +80,7 @@ class JdbcRunRepositoryTest {
                 Location.OUTDOOR), 1);
         var run = repository.findById(1).get();
         assertEquals("Monday Morning Run", run.title());
-        assertEquals(5, run.kms());
+        assertEquals(5, run.miles());
         assertEquals(Location.OUTDOOR, run.location());
     }
 
